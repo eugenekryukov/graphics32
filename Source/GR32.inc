@@ -169,6 +169,10 @@
     {$DEFINE OMIT_MMX}
   {$ENDIF}
 
+  {$IFDEF PUREPASCAL}
+    {$DEFINE OMIT_MMX}
+  {$ENDIF}
+
 
 (*
   Symbol OMIT_SSE2:
@@ -182,6 +186,9 @@
 *)
 
   {-$DEFINE OMIT_SSE2}
+  {$IFDEF PUREPASCAL}
+    {$DEFINE OMIT_SSE2}
+  {$ENDIF}
 
 
 (*
