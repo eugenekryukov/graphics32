@@ -762,6 +762,7 @@ begin
   until Count = 0;
 end;
 
+{$IFNDEF PUREPASCAL}
 procedure FillSpan_ASM(Ptr: PColor32Array; Covers: PColor32; Count: Cardinal;
   const C: TColor32);
 asm
@@ -872,6 +873,7 @@ asm
         JS      @LoopStart
 {$ENDIF}
 end;
+{$ENDIF !PUREPASCAL}
 
 {$IFNDEF OMIT_MMX}
 {$IFDEF TARGET_X86}
